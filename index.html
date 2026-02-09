@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Raporty zaangażowania userów</title>
+
+<style>
+  :root {
+    --bg: #f8fafc;
+    --table-bg: #ffffff;
+    --border: #e5e7eb;
+    --header-bg: #f1f5f9;
+    --primary: #4f46e5;
+    --primary-light: #eef2ff;
+    --text: #111827;
+    --muted: #6b7280;
+  }
+
+  body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--bg);
+    padding: 32px;
+    color: var(--text);
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--table-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+
+  thead th {
+    background: linear-gradient(180deg, #f8fafc, var(--header-bg));
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid var(--border);
+  }
+
+  tbody td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  tbody tr:hover {
+    background-color: #f0f7ff;
+  }
+
+  /* Metryki – pierwsza kolumna */
+  tbody td:first-child {
+    font-weight: 600;
+    background-color: #f9fafb;
+    white-space: nowrap;
+  }
+
+  /* Linki jako przyciski */
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  a:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(79,70,229,0.3);
+  }
+
+  /* Komórki z linkami wyśrodkowane */
+  td:not(:first-child) {
+    text-align: center;
+  }
+
+  /* Responsywność */
+  @media (max-width: 900px) {
+    body {
+      padding: 16px;
+    }
+
+    table {
+      font-size: 12px;
+    }
+
+    a {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Raporty zaangażowania userów</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metryka</th>
+      <th>Serwisy zbiorczo</th>
+      <th>Serwis pojedynczo</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>%EPV</td>
+    <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMp7G8JIaMmErQTtnRxWCdHYUPMEfZhqwiHE6dg+lNIhstkc8KAAkECMIwNxKl42vE1s8IAE5jhemteGRAY8rF4OpgEsF6tQkGoIOCAKwABka1DEHRReFcIChjlxOOCsPh1i2anQPFuiM+gTgMDsSxW3jJIu8GjgsACZMhgU5Q28uI4vJCvKscgFQoh8p5jhx2CO1GWCFWpJUpoIiuVFAZIGEnWwZASABFXu8cOsvj8/gCgXA/OcPdgvQkmGCeXCrBEmAALCBycEgXIFJRAA==">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMqULV5taB1d1AFBBH2YasIhxOnYfVORILMjC7hqMsEKt1lIIHAEs9MFBeBBdvtDsdFGRGtQoMIkGhkoRWgR2p0OFYEtFsFB5o8Qs9Xu84J9JnBphstkc8KB7sFhGBuJVLvj4mtiRAAnMcL01rwyJ9CVYvB1MAlgvVqEg1BBWQBWAAMaI2Apx90cUslnO5VjkWzU6B4uL5IASgTgMDsSxW3mVtu8GjgsACyvZgSNQ28Uo4XKgIXD5st1rZns5jkl2COQLdSpU8YI3t9FF1wk62DICQAIqTyTh1k8Xm8Pl9GRQ9iB89hCwkmCzTTyfBomAALCByVkgXIFJRAA==">📊 Tabela (WoW)</a> <a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhCjDY5BzYiJHVYWPadnAjmQYQuExgiDBy+G4gJZg0XiCNTNiY9IrKagytvu1onfzdIQb9mJoSYQBG6dj904Egc6NFstwGsNngtgB3CBwBIvTBQcgQA5HE74JQIFRNJhQCRINDJEDea7+CAzJgJUnEbBQBYECJRJiiODYGAIWgQbwGXIAdWKu1OoB64UilOibT6lOpC3JEGC8xwBjgCKpFK66kIpI5+BZCAQWO28TBHhAPRcVPINQkYCETAUu006GEhPFIASITgrPoK1BBhA6qJNW0SrS+haJpCZuGNSp/CtUDCcbsdpoDoFzuJrvdnrsqwQ619/pdQdgwT9hxAEiWJASABFJTScO5XWEXm9PsyfnAZuXK9hq5x+QZE6ogA=">📈 Wykres: ost 12 msc</a></td>
+    </tr>
+
+    <tr>
+      <td>SG CTR</td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gABaYGsJwHBQN1NiYaPgKCMqHIFDCSGjJhK0E7Z0cVgnR2FDzBH3bwiFiOlsH0ppFrpgHKc8KAAkECEhsABrEK8JC8JFQELCMBWDxeNrxNbvCABOY4XprXhkEGvKxeDqYBLBbEBSCYGBYkL1ahINQQaEAVgADI1qGIOsS8K4QHDHDTqcEcdxqHJIWp0DxHgTfoE4DA7EsVt4edrvBo4LAAjzYYF5UNqp0UWiIBisTirGqHBroS0dSAGdTsKdqMsEKtgqb8eayJa0hQxQHOtgyAkACKfb44dZ/NQAoFwEGTOB+K7CZOppiQ6EBsAqnwaJgbCByGu5ApKIA==">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gABaYGsJwHBQN1NiYaPgKCMqULV5taB1d1AFBBH3bwiHE6dh9U5EgsyMFrhqMsEKt1to0KUNiVDiBjqd5IoyI1qFBhEg0MlCK0CO1OhwrAlotgoPMXiE3h8vj84NMQFBMA5EaAnsEkNgANYhXhIXicqAhYRgKweG54+JrIkQAJzHC9Na8MjfAlWLwdTAJYJCgKQTAwQUherUJBqCCIgCsAAZUQzJdino5lUrgsLuNQ5Ey1OgeDjxSAEoE4DA7EsVt5jX7vBo4LAAsbWYEnUNqp1ubyIPzBcKrJ6HN6WVHXY4ldhTiDw8FI2Lo2RY2kKLbhJ1sGQEgARElknDrV5qd6fODfSZ0g7UZvYVsJJhMxEgN2i6JMDYQORz3IFJRAA">📊 Tabela (WoW)</a> <a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhCjDY5BzYiJHVYWPadnAjmQYQuExgiDBy+G4glJjaEnD8+o1M2Jj0ispqDK2+7Wid/N0hBv27EmEARunY/dOBIHNRotluA1hs8Fs9GhSJQyscQKdzkoEComkwoBIkGhkiBvLd/BAZkwEoTiNgoAsCBEokxRHBsDAELQIN4DLkAOrFTB0YQgHrhSKk6JtPqk8kLYkQYLzHAGOBQchkklddSEQks/AMhAINEgFQycEePkhFxkxUGCRgIRMBTczToXl4moJEJwRn0FZggwgVVOgzaeVpfQtY0KU3DGpEADWYXISHIUagYUtdltNHt5xuNV8NEV2A9oIQ629vpFIADsGCPvhEiWJASABExRScO4QK9NO8vvTfnAZjW68QEpxuecQJahKogA">📈 Wykres: ost 12 msc</a></td>
+     
+    </tr>
+
+    <tr>
+      <td>Story CTR</td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMp7G8JIaMmErQTtnRxWCdHYUPMEfZhqwiHE6dg+lNIhstkc8KAAkECMIwNxKl42vE1s8IAE5jhemteGRAY8rF4OpgEsF6tQkGoIOCcgAGGmNahiDoovCuEBQxy4nHBWHw6xbNToHi3RGfQJwGB2JYrbxkkXeDRwWABMmQwKcobVToAaxCvCQvG1UBCsKscgFQoh8p5jhx2CO1GWCFWpJU1oIiuVFAZIGEnWwZASABFXu8cOsvj8/gCgXA/Oc/dgAwkmGCeXCrBEmAALCBycEgXIFJRAA=">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMqULV5taB1d1AFBBH2YasIhxOnYfVORILMjC7hqMsEKt1lIIHAEs9MFBeBBdvtDsdFGRGtQoMIkGhkoRWgR2p0OFYEtFsFB5o8Qs9Xu84J9JnBphstkc8KB7sFhGBuJVLvj4mtiRAAnMcL01rwyJ9CVYvB1MAlgvVqEg1BBWQBWNEbAU4+6OKWSzncqxyLZqdA8XF8kAJQJwGB2JYrbzK63eDRwWABZXswIGobVToAaxCvCQvGDUBCXNN5stbPdnMckuwRyBLqVKiTBE93oo2uEnWwZASABFSeScOsni83h8voyKHsQEXsCWEkwWcaeT4NEwABYQOSskC5ApKIA==">📊 Tabela (WoW)</a> <a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhCjDY5BzYiJHVYWPadnAjmQYQuExgiDBy+G4gJZg0XiCNTNiY9IrKagytvu1onfzdIQb9mJoSYQBG6dj904Egc6NFstwGsNngtgB3CBwBIvTBQcgQA5HE74JQIFRNJhQCRINDJEDea7+CAzJgJUnEbBQBYECJRJiiODYGAIWgQbwGXIAdWKu1OoB64UilOibT6lOpC3JEGC8xwBjgCKpFK66kIpI5+BZCAQWO28TBHhAPRcVPINQkYCETAUu006GEhPFIASITgrPoK1BBhA6qJNW0SrS+haJpCZuGNSIAGswuQkOQY1Awla7HaaA6Bc7iSBfDQLdgvSCEOtff6XUHYME/Yc80sSAkACKSmk4dyusIvN6fZk/OAzOsSBvEBKcfkGK1CVRAA=">📈 Wykres: ost 12 msc</a></td>
+    </tr>
+
+    <tr>
+      <td>%Quick Exits</td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMp7G8JIaMmErQTtnRxWCdHYUPMEfZhqwiHE6dg+lNIhstkc8KAAkECMIwNxKl42vE1s8IAE5jhemteGRAY8rF4OpgEsF6tQkGoIOCAKyNahiDoovCuEBQxy4nHBWHw6xbNToHi3RGfQJwGB2JYrbxkoXeDRwWABMmQwLsobeACOMAgvAA1iEyAAPKk8uR8gUQ2VYhTio7UZYIVaklRWgjyxUUOkgYSdbBkBIAEVe7xw6y+Pz+AKBcD85x92D9CSYYK5cKsESYAAsIHJwSBcgUlEA=">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMqULV5taB1d1AFBBH2YasIhxOnYfVORILMjC7hqMsEKt1lIIHAEs9MFBeBBdvtDsdFGRGtQoMIkGhkoRWgR2p0OFYEtFsFB5o8Qs9Xu84J9JnBphstkc8KB7sFhGBuJVLvj4mtiRAAnMcL01rwyJ9CVYvB1MAlgvVqEg1BBWQBWNEbAU4+6OKWSzncqxyLZqdA8XF8kAJQJwGB2JYrbzK63eDRwWABZXswIGobeACOMAgvAA1iEyAAPdU86zmy1s93ihSOo5Al1KlQpgie70UbXCTrYMgJAAipPJOHWTxebw+X0ZFD2IGL2FLCSYLON8YiTAAFhA5KyQLkCkogA==">📊 Tabela (WoW)</a> <a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhCjDY5BzYiJHVYWPadnAjmQYQuExgiDBy+G4gJZg0XiCNTNiY9IrKagytvu1onfzdIQb9mJoSYQBG6dj904Egc6NFstwGsNngtgB3CBwBIvTBQcgQA5HE74JQIFRNJhQCRINDJEDea7+CAzJgJUnEbBQBYECJRJiiODYGAIWgQbwGXIAdWKu1OoB64UilOibT6lOpC3JEGC8xwBjgCKpFK66kIpI5+BZCAQWO28TBHhAPRcVPINQkYCETAUu006GEhPFIASITgrPoK1BBhA6qJNW0SrS+haJpCZuGNQAjjAIOQANZhYgADw5Nvs9sdeCuNTdSk9dlWCHWvv9LqDsGCfsOIAkSxICQAIpKaTh3K6wi83p9mT84DNa/XsI3OPyDFahKogA===">📈 Wykres: ost 12 msc</a></td>
+    </tr>
+
+ <tr>
+      <td>SG Clicks (links)/ User</td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gABaYGsJwHBQN1NiYaPgKCMqHIFDCSGjJhK0E7Z0cVgnR2FDzBH3bwiFiOlsH0ppFrpgHKc8KAAkECAgYCFBhAAI5WDxeNrxNbvCABOY4XprXhkEGvKxeDqYBLBerUJBqCDQnIABlZjWoYg6uLwrhAcMcZNJwURyOwaKsckhanQPEeWN+gTgMDsSxW3npCu8GjgsAC9NhgSFQ2qnQA1iFeEheOaoMjuVKZXKYdrglTSdhTtRlojNSo3QRdfqKJyQMJOtgyAkACKfb44dZ/NQAoFwEGTOB+K4R7BRhJMSHQkBilHoqIaJgbCByYu5ApKIA==">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gABaYGsJwHBQN1NiYaPgKCMqULV5taB1d1AFBBH3bwiHE6dh9U5EgsyMFrhqMsEKt1lIIHAEttMFBeBAQIcQMdTvJFGRGtQoMIkGhkoRWgR2p0OFYEtFsFB5i8Qm8Pl8fnBpiAoJgHGjQE9gmCQoMIABHKweG7E+JrckQAJzHC9Na8MjfUlWLwdTAJYL1ahINQQNE5AAMBqxrPFBKejkVCp5MD52EFVjk7LU6B4hNFIASgTgMDsSxW3i17u8GjgsACWq5gUtQ2qnQA1iFeEhePGoHyxA5Hc7XXhrt5VQrsKcQQHNSpg8FQ+GKCbhJ1sGQEgARSnUnDrV5qd6fODfSbMg7UevYRsJJjstEgXn8oVRDRMDYQORT3IFJRAA===">📊 Tabela (WoW)</a><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhCjDY5BzYiJHVYWPadnAjmQYQuExgiDBy+G4glJjaEnD8+o1M2Jj0ispqDK2+7Wid/N0hBv27EmEARunY/dOBIHNRotluA1hs8FsAO4QOAJXaYKDkCAgY4gU7nJQIFRNJhQCRINDJEDeW7+CAzJgJcnEbBQBYECJRJiiODYGAIWgQbwGXIAdWKmDowhAPXCkWp0TafWptIWlIgwXmOAMcERNKpXXUhHJXPwbIQCBxIBUMnBHhFIRcNPINQQMDCQwgAEc7ApBZp0MKSTUEiE4Oz6CswQYQFrvQZtKq0voWhaFFbhralgBrMLkJDkZNQB0m13uz14G41Xw0G3YQOgu01UNVUkgSOwYKh1ESJYkBIAERldJw7hAr007y+rN+cBmLbbxASnEF50I9sdLtUQA===">📈 Wykres (ost 12 msc)</a></td>
+    </tr>
+
+ <tr>
+      <td>Story Clicks (links)/ User</td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMp7G8JIaMmErQTtnRxWCdHYUPMEfZhqwiHE6dg+lNIhstkc8KAAkECAgYCFBhAAI5WDxeNrxNbPCABOY4XprXhkQGPKxeDqYBLBerUJBqCDgnIABkZjWoYg6mLwrhAUMcRMJwVh8OwSKsci2anQPFuaM+gTgMDsSxW3mpMu8GjgsAC1MhgT5Q2qnQA1iFeEheMaoPD2WKJVKIergmTCdgjtRlrDVSonQRNdqKKyQMJOtgyAkACKvd44dZfH5/AFAuB+c4h7BhhJMMGCuEI5FRDRMAAWEDk4JAuQKSiAA=">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwA6lZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSFyMNi8jNiI4VUho37UcMOZwZ1WYIgwZC4gRZgO7iAN1NiYaPgKCMqULV5taB1d1AFBBH2YasIhxOnYfVORILMjC7hqMsEKt1lIIHAEs9MFBeBBdvtDsdFGRGtQoMIkGhkoRWgR2p0OFYEtFsFB5o8Qs9Xu84J9JnBphstkc8KB7sEQSFBhAAI5WDyXfHxNbEiABOY4XprXhkT6EqxeDqYBLBerUJBqCCsnIABl1aI2Ipx90cctlnJg3OwfKsci2anQPFxQpACUCcBgdiWK286pd3g0cFgAXV7MCZqG1U6AGsQrwkLwY1BuWIHHaHU62QHgkrZdgjkDfWqVDmCEGQxRDcJOtgyAkACKk8k4dZPF5vD5fRkUPYgGvYOsJJgsy3W21RDRMAAWEDkrJAuQKSiAA=">📊 Tabela (WoW)</a><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhCjDY5BzYiJHVYWPadnAjmQYQuExgiDBy+G4gJZg0XiCNTNiY9IrKagytvu1onfzdIQb9mJoSYQBG6dj904Egc6NFstwGsNngtgB3CBwBIvTBQcgQA5HE74JQIFRNJhQCRINDJEDea7+CAzJgJUnEbBQBYECJRJiiODYGAIWgQbwGXIAdWKu1OoB64UilOibT6lOpC3JEGC8xwBjgCKpFK66kIpI5+BZCAQWO28TBHhAPRcVPINQQMDCQwgAEc7Apdpp0MJCeKQAkQnBWfQVqCDCB1USatolWl9C0TSEzcNLUsANZhchIcgJqA2lQ0R3O114K41Xw0C3YP0gq01INVYkgMOwYJBw4gCRLEgJAAikppOHcnrCLzen2ZPzgMybLewbc4/IMVpt2HtQaAA">📈 Wykres (ost 12 msc)</a></td>
+    </tr>
+
+ <tr>
+      <td>Invetory/PV</td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwAslZQ9sL4ALQ5qp7eQvZFIEoAuo3UUMJIaMmEVcFFDhCcVgnR2FCZwQkhmGrCIcTp2BPYcH4tmA5oPCABQQT9YGTYaGvuAGJwvEcOVh5ePfFk3NRDARdjBAkPvAdDA9RefZgEsF6tQkGoIBs8ABWAAMzRAYj6D3wri2gUcBy+wWEYEe1jWanQmxu3g+ChgdisYEQMG8IK6twIGjgsACINA2wx2Cxu2w+0OxzOFzWVjkBKJeDc3XegTgFI21GpCFpwJUDO8zNZFHhwn62DICQAIsNRjgXCAJlMZnM4AsQks/A0/nqDUw1pCQHsDpdTudLtdokwABYQOQe3IFJRAA">📊 Tabela (WoW)</a></td>
+      <td><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhpwBGCApiADTjTxKoY4DKZaG2A5lPqAMaYIEcAA5QyAJUwB3bngBmiMQF9qGALZlkOCgQCiaXgHoAqgBUAwlRByICNGQBOsgNqg0AT2E7CEDVYdkcvggAPoh6hSqvmQACo5YACYuoAkwDuhYuAQxAIwAslZQ9sL4ALQ5qp7eQvZFIEoAuipuVcFFDhCc/oHBCSGYasIhxOnYfdhwftRwvIxZIJ1WYIgwZC4gUhBwCQOYULwQIA3U2Jho+AoIyscgUMJIaMmErQTtnRxWCdHYUJm9/YNhqNxpNIrdMA5znhQAEggRhGBuJUvG14mtPhAArM/gQEmteGQxu8rF4OpgEsF6tQkGoIFCAKwABka1DEHXReFcIFhjkJBOCCKR1ghanQPGeKNxgTgMDsSxW3ipEu8GjgsACVJhgV52H5BE6YEJaAh7gAYjNjQ4rHIRWLocretLZedqMsEKtKSoHQRVeqKCyQMJOtgyAkACLfX44dZ9AZDEZwMYhCZ+G5B7AhhJMCFQwOIqwRJgACwgclzuQKSiAA">📊 Tabela (WoW)</a><a href="https://self-service-bi-traffic-analytics.ringpublishing.com/#self-service-bi-media-product-user-engagement-prod/4/N4IgbglgzgrghgGwgLzgFwgewHYgFwhLYCmAtAMYAWcATmiADTjTxKoY4DKxaG2A5lHyh+NTDAAO3GhGJC8AM0RRiAXyYYAtsWQ5i+EAFE05APQBVACoBhRiAUQEaYjXkBtUGgCeE/QS36TDTECgYA+mEBdgEACi5YACbuoAkwNOhYuAQxAIwATACydlDOEvikORo+foTocvSqALrqntUGJTICdsGhBAlhmJoSYQBG6dj92HDadnDkHFkgELhMYIgwcvhuIADuEHAJg5hQ5BAgjUzYmPSKymoXIFASSGjJIN6+BlFMCRDa2FBMuFIn9AiBRHBsDAELQIN4DLkAOrFTB0YQgHrA77vNp9UEAoE/CDBeZAghwE7ECbLfggdSEP5w/BQhAIJpMFQyTZ4DwYkIuKnkGrLMBUtCorwAMTm4podgUqM06HRHxqCRCcGh9FW6xqdKqnwI2gpaX07JAEmWJASABF8YCcO4QP1BsMxpDJtN9A9LdhrZxUTclthRdhZVKZai6UA===">📈 Wykres (ost 12 msc)</a></td>
+    </tr>
+
+    <tr>
+      <td>Semantyka</td>
+      <td><a href="https://insights.cloud.onet/#/views/AureusReport-Content/Semanticcategories?:iid=2">🔎 Raport</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
